@@ -66,7 +66,7 @@
             <div class="collapse navbar-collapse main-menu">
               <div class="nav-menu-wrapper">
                 <ul class="navbar-nav mr-auto" id="menu">
-                  <li class="nav-item submenu">
+                  <li class="nav-item">
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
@@ -83,6 +83,7 @@
                         <a class="nav-link" href="product-single.html"
                           >Products Details</a>
                       </li>
+                      <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -668,7 +669,7 @@
             <!-- Our Benefits Image Start-->
             <div class="our-benefits-image">
               <figure>
-                <img src="images/our-ben.jpg" alt="" />
+                <img src="images/our-benefits.png" alt="" />
               </figure>
             </div>
             <!-- Our Benefits Image End -->
@@ -1034,7 +1035,7 @@
 
                 <!-- Footer Links Start -->
                 <div class="footer-newsletter-form">
-                  <h3>Stay Updated with the Latest Textile News & Trends</h3>
+                  <h3>Stay Updated with us</h3>
                   <form id="newslettersForm" action="#" method="POST">
                     <div class="form-group">
                       <input
@@ -1045,7 +1046,7 @@
                         placeholder="Enter Email Address"
                         required
                       />
-                      <button type="submit" class="newsletter-btn">
+                      <button type="submit" class="newsletter-btn" onclick="sendMail()">
                         <img src="images/arrow-primary.svg" alt="" />
                       </button>
                     </div>
@@ -1172,7 +1173,26 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+
+    <script>
+function sendMail() {
+
+    var userEmail = document.getElementById("mail").value;
+
+    if(userEmail === ""){
+        alert("Please enter your email");
+        return;
+    }
+
+    var subject = "Connecting For Enquiry";
+    var body = "Hello BPS Meditech,%0D%0A%0D%0AI am interested in learning more about your products.%0D%0A%0D%0AMy Email: " + userEmail;
+
+    window.location.href = "mailto:info@bpsmeditech.com?subject=" + subject + "&body=" + body;
+}
+</script>
+
   </body>
 
   <!-- Mirrored from html.awaikenthemes.com/linex/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 26 Feb 2026 09:53:31 GMT -->
 </html>
+
